@@ -1,0 +1,20 @@
+[GLOBAL]
+pants_version = "2.22.0rc2"
+pythonpath = ["../pants/src/python"]
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.experimental.python_new",
+]
+pantsd_max_memory_usage = "8GiB"
+
+[python]
+interpreter_constraints = [">=3.11,<3.12"]
+enable_resolves = true
+resolves = { python-default = "python-default.lock" }
+default_resolve = "python-default"
+
+[python-infer]
+init_files = "always"
+
+[source]
+marker_filenames = ["SOURCE_ROOT"]

@@ -1,0 +1,9 @@
+[project]
+dynamic = ["dependencies"]
+requires-python = "CPython>=3.10,<3.11"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[pants]
+lockfile = "python-default.lock"
